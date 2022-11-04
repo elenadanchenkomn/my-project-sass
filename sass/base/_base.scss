@@ -8,10 +8,7 @@ html {
   }
   h1{
     font-family: "Poppins", Verdana, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 44px;
-    line-height: 54px;
+    @include font(44px, 54px, bold, normal );
   }
   h2{
    
