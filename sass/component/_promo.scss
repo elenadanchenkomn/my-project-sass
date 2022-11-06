@@ -9,6 +9,12 @@ align-items: center;
 .promo__title{
 margin: 0 0 30px;
 }
+.promo__text{
+    max-width: 487px;
+    margin: 0 0 45px;
+    @extend %font-add;
+    @include font(1.8rem, 2.8rem, $weight:400);
+}
 
 .promo__content{
     padding-right: 65px;

@@ -1,5 +1,5 @@
 .button{
-    font-family: "Open Sans", Verdana, sans-serif;
+    @extend %font-prim;
     padding: 11px 25px 13px;
     font-weight: bold;
     font-size: 1.6rem;
@@ -24,6 +24,10 @@
             border-color: $color-aditional;
         }
     }
+}
+.link-button{
+  color: $color-primary;
+  @extend %font-add;
 }
 
 

@@ -3,8 +3,12 @@
   transition: all 0.3s ease-out;
 }
 
-h1 {
+.promo__text, .link-button, h1 {
   font-family: "Poppins", Verdana, sans-serif;
+}
+
+.button, body {
+  font-family: "Open Sans", Verdana, sans-serif;
 }
 
 html {
@@ -13,7 +17,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", Verdana, sans-serif;
+  line-height: 2.6rem;
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
@@ -52,7 +58,6 @@ h5 {
 }
 
 .button {
-  font-family: "Open Sans", Verdana, sans-serif;
   padding: 11px 25px 13px;
   font-weight: bold;
   font-size: 1.6rem;
@@ -77,6 +82,21 @@ h5 {
 .button_colored:hover {
   background: rgb(255, 117, 73);
   border-color: rgb(255, 117, 73);
+}
+
+.link-button {
+  color: rgb(255, 153, 0);
+}
+
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico_play {
+  background-image: url("./assets/button-icon/play.svg");
+  max-width: 18px;
+  height: 19px;
 }
 
 .wrapper {
@@ -121,6 +141,15 @@ h5 {
 
 .promo__title {
   margin: 0 0 30px;
+}
+
+.promo__text {
+  max-width: 487px;
+  margin: 0 0 45px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .promo__content {
