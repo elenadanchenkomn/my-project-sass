@@ -1,0 +1,9 @@
+.loyout-4-column {
+    @include columns ($width:21%);
+}
+.loyout-3-column {
+    @include columns ($width:30%);
+}
+.loyout-2-column {
+    @include columns ($width:40%);
+}
