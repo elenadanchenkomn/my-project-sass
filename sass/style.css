@@ -131,6 +131,18 @@ h5 {
   background-image: url(../assets/icon.svg/3.svg);
 }
 
+.ico-phone {
+  background-image: url(../assets/contact-us-icon/ico_phone.svg);
+  width: 25px;
+  height: 25px;
+}
+
+.ico-letter {
+  background-image: url(../assets/contact-us-icon/ico_mail.svg);
+  width: 25px;
+  height: 25px;
+}
+
 .tags {
   display: flex;
 }
@@ -236,6 +248,25 @@ h5 {
 
 .contact-us__button > * {
   min-width: 117px;
+}
+
+.contact-us__title {
+  margin: 0px;
+}
+
+.contact-us__text {
+  max-width: 528px;
+  padding-bottom: 33px;
+}
+
+.contact-uc__link {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 11px;
+  color: rgb(84, 72, 55);
+  text-decoration-line: none;
 }
 
 .promo {
