@@ -1,0 +1,25 @@
+.about-us{
+    padding: 30px 0 100px 0;
+}
+.about-us__title{
+    margin: 0 0 14px;
+}
+.employe{
+    display: flex;
+    padding: 35px;
+}
+.about-us__descriotin{
+    margin: 0 0 45px;
+}
+.employe__photo{
+   
+}
+.employe__contact{
+
+}
+.employe__name{
+    margin: 0px;
+}
+.employe__title{
+ @include font ($size:1.4rem, $height:2.6rem, $weight: 400);
+}
