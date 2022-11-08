@@ -9,6 +9,9 @@ html {
   h1{
     @extend %font-add;
     @include font(4.4rem, 5.4rem );
+    @include media-mobail{
+      @include font(3.2rem, 4.2rem );
+    }
   }
   h2{
     @include font(3.4rem, 4.6rem );

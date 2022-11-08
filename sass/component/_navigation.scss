@@ -13,3 +13,8 @@
         color: $color-primary;
     }
 }
+.header__navigetion{
+    @include media-tablet{
+        display: none;
+    }
+}

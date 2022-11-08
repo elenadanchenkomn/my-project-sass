@@ -1,23 +1,543 @@
-/* Error: Missing argument $line-height.
- *   ,--> sass\component\_about-us.scss
- * 24|  @include font ($size:1.4rem, $height:2.6rem, $weight: 400);
- *   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
- *   '
- *   ,--> sass\abstract\_mixins.scss
- * 1 | @mixin font ($size, $line-height, $weight:bold, $style :normal ) {
- *   |        ========================================================= declaration
- *   '
- *   sass\component\_about-us.scss 24:2  font()
- *   sass\component\_about-us.scss 24:2  @import
- *   sass\style.scss 27:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $line-height.\a   \250c \2500 \2500 > sass\\component\\_about-us.scss\a 24\2502   @include font ($size:1.4rem, $height:2.6rem, $weight: 400);\d\a   \2502   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > sass\\abstract\\_mixins.scss\a 1 \2502  @mixin font ($size, $line-height, $weight:bold, $style :normal ) {\d\a   \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   sass\\component\\_about-us.scss 24:2  font()\a   sass\\component\\_about-us.scss 24:2  @import\a   sass\\style.scss 27:9                root stylesheet";
+@import "../node_modules/normalize.css/normalize.css";
+.footer-navigation__links a, .navigation__link, .logo-path {
+  transition: all 0.3s ease-out;
 }
+
+.footer-navigation__links, .promo__text, .link-button, h1 {
+  font-family: "Poppins", Verdana, sans-serif;
+}
+
+.button, body {
+  font-family: "Open Sans", Verdana, sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+@media (max-width: 414px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+h2 {
+  font-size: 3.4rem;
+  line-height: 4.6rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.blok-shadowed {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.button {
+  padding: 11px 25px 13px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.17rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button_bordered {
+  background: #ffffff;
+  border: 1px solid rgb(215, 215, 215);
+  color: rgb(23, 58, 86);
+}
+.button_bordered:hover {
+  background: rgb(188, 208, 229);
+  border: rgb(188, 208, 229);
+}
+.button_colored {
+  background: rgb(255, 153, 0);
+  color: #ffffff;
+  border: 1px solid rgb(255, 153, 0);
+}
+.button_colored:hover {
+  background: rgb(255, 117, 73);
+  border-color: rgb(255, 117, 73);
+}
+
+.link-button {
+  color: rgb(255, 153, 0);
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-button__text {
+  margin-left: 9px;
+}
+
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico_play {
+  background-image: url("../assets/button-icon/play.svg");
+  width: 18px;
+  height: 19px;
+}
+
+.icon-square {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-square-violet {
+  background-image: url(../assets/icon.svg/4.svg);
+}
+.icon-square-yellow {
+  background-image: url(../assets/icon.svg/1.svg);
+}
+.icon-square-pink {
+  background-image: url(../assets/icon.svg/2.svg);
+}
+.icon-square-blue {
+  background-image: url(../assets/icon.svg/3.svg);
+}
+
+.ico-phone {
+  background-image: url(../assets/contact-us-icon/ico_phone.svg);
+  width: 25px;
+  height: 25px;
+}
+
+.ico-letter {
+  background-image: url(../assets/contact-us-icon/ico_mail.svg);
+  width: 25px;
+  height: 25px;
+}
+
+.tags {
+  display: flex;
+}
+.tags > * {
+  margin-right: 7px;
+}
+
+.tag {
+  border-radius: 90px;
+  padding: 0 14px;
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.tag_selected {
+  background-color: rgb(255, 153, 0);
+  color: #ffffff;
+}
+.tag_bordered {
+  border: 1px solid rgb(215, 215, 215);
+}
+.tag_colored {
+  background-color: rgb(245, 245, 245);
+}
+
+.humburger__line, .humburger::after, .humburger::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(23, 58, 86);
+  height: 3px;
+  width: 100%;
+}
+
+.humburger {
+  display: none;
+  position: relative;
+  width: 31px;
+  height: 25px;
+}
+@media (max-width: 768px) {
+  .humburger {
+    display: block;
+  }
+}
+.humburger::before {
+  top: 0;
+  left: 0;
+}
+.humburger::after {
+  bottom: 0;
+  left: 0;
+}
+
+.humburger__line {
+  top: calc(50% - 1.5px);
+}
+
+.wrapper {
+  max-width: 1197px;
+  margin: 0 auto;
+}
+@media (max-width: 1197px) {
+  .wrapper {
+    padding: 0 46px;
+  }
+}
+
+.header {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 15px 0 17px 0;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .header__wrapper {
+    padding-left: 24px;
+  }
+}
+
+.header__logo__line {
+  display: flex;
+}
+
+.header__buttons > .button {
+  margin-left: 14px;
+}
+@media (max-width: 414px) {
+  .header__buttons > .button {
+    display: none;
+  }
+}
+
+.header__buttons > .button:first-child {
+  margin-left: 14px;
+  margin-left: 0px;
+}
+
+.loyout-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.loyout-4-column > * {
+  flex-basis: 21%;
+}
+
+.loyout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.loyout-3-column > * {
+  flex-basis: 28%;
+}
+
+.loyout-2-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.loyout-2-column > * {
+  flex-basis: 45%;
+}
+
+.contact-us {
+  background-color: rgb(255, 238, 225);
+  margin: 0;
+  padding: 62px 0 82px 0;
+}
+
+.contact-us__form input, .contact-us__form textarea {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 10px 11px;
+  border-radius: 5px;
+}
+.contact-us__form input:focus, .contact-us__form textarea:focus {
+  border-color: rgb(255, 153, 0);
+  outline: none;
+}
+.contact-us__form textarea {
+  resize: none;
+  width: 95%;
+}
+
+.contact-us__line {
+  margin-bottom: 19px;
+}
+
+.contact-us__button > * {
+  min-width: 117px;
+}
+
+.contact-us__title {
+  margin: 0 0 17px 0;
+}
+
+.contact-us__text {
+  max-width: 528px;
+  padding-bottom: 33px;
+  margin: 0;
+}
+
+.contact-uc__link {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 11px;
+  color: rgb(84, 72, 55);
+  text-decoration-line: none;
+}
+
+.promo {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.promo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo__title {
+  margin: 0 0 30px;
+}
+
+.promo__text {
+  max-width: 487px;
+  margin: 0 0 45px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.promo__content {
+  padding-right: 65px;
+}
+@media (max-width: 1197px) {
+  .promo__content {
+    padding-right: 0ex;
+    min-width: 380px;
+  }
+}
+
+.promo__buttons > * {
+  margin-right: 44px;
+}
+.promo__buttons > *:last-child {
+  margin-right: 0;
+}
+
+.navigation {
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+
+.navigation__link {
+  list-style: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.navigation__link:hover {
+  color: rgb(255, 153, 0);
+}
+
+@media (max-width: 768px) {
+  .header__navigetion {
+    display: none;
+  }
+}
+
+.tools-wrapper {
+  padding-bottom: 90px;
+  background-image: url(../assets/baground/bg-tool.svg);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.tools-title {
+  max-width: 462px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.tool__title {
+  margin: 0 0 16px;
+}
+
+.tool__icon {
+  margin-bottom: 30px;
+}
+
+.tools__button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.strategies {
+  padding: 30px 0;
+}
+
+.strategies__title {
+  margin: 0 0 14px;
+}
+
+.strategies__description {
+  margin: 0 0 24px;
+}
+
+.strategies__tags {
+  margin-bottom: 31px;
+}
+
+.strategies-wrapper > * {
+  margin-bottom: 30px;
+}
+
+.stratedies__content {
+  padding: 24px 33px 26px;
+}
+
+.strategies__name {
+  margin: 0 0 29px;
+}
+
+.footer {
+  padding: 60px 0 70px;
+}
+
+.footer-wrapper {
+  display: flex;
+}
+
+.footer-navigation {
+  flex-grow: 1;
+  padding-left: 151px;
+}
+
+.footer-navigation__links {
+  padding: 0px;
+}
+.footer-navigation__links a {
+  color: rgb(84, 72, 55);
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+.footer-navigation__links a:hover {
+  color: rgb(255, 153, 0);
+}
+
+.footer-navigation__title {
+  margin: 0 0 15px;
+}
+
+.about-us {
+  padding: 30px 0 100px 0;
+}
+
+.about-us__title {
+  margin: 0 0 14px;
+}
+
+.employe {
+  display: flex;
+  padding: 25px;
+  position: relative;
+}
+
+.about-us__descriotin {
+  margin: 0 0 45px;
+}
+
+.employe__title {
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+}
+
+.employe-conteiner {
+  padding-right: 32px;
+}
+
+.employe__contact {
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(25, 67, 239);
+  text-decoration: none;
+}
+.employe__contact:hover {
+  text-decoration: underline;
+}
+
+.employe__photo {
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  right: -32px;
+  margin: 0;
+}
+
+.employe__name {
+  margin: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

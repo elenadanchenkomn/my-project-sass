@@ -1,0 +1,32 @@
+%humburger__line{
+    display: inline-block;
+    content: ""; 
+    position: absolute;
+    border-radius: 5px;
+    background: $color-humburger;
+    height: 3px;
+    width: 100%;
+}
+.humburger{
+    display: none;
+    position: relative;
+    width: 31px;
+    height: 25px;
+    @include media-tablet{
+        display: block;
+    }
+    &::before{
+        @extend %humburger__line;
+        top: 0;
+        left: 0; 
+    }
+    &::after{
+        @extend %humburger__line;
+        bottom: 0;
+        left: 0; 
+    }
+}
+.humburger__line{
+   @extend %humburger__line;
+   top: calc(50% - 1.5px);
+}

@@ -1,12 +1,13 @@
 .contact-us{
     background-color: $color-background;
-    padding: 62px 82px;
+    margin: 0;
+    padding: 62px 0 82px 0;
 }
 .contact-us__form{
    input, textarea{
      border: 1px solid $color-light;
      background-color: $color-light;
-     padding: 10px 21px;
+     padding: 10px 11px;
      border-radius: 5px;
      &:focus{
        border-color: $color-primary;
@@ -16,7 +17,7 @@
    }
    textarea{
     resize: none;
-    width: 91%;
+    width: 95%;
    }
 }
 .contact-us__line{
@@ -28,12 +29,14 @@ margin-bottom: 19px;
     }
 }
 .contact-us__title{
-    margin: 0px;
+    margin: 0 0 17px 0;
+
 }
 
 .contact-us__text{
     max-width: 528px;
     padding-bottom: 33px;
+    margin: 0;
 
 }
 .contact-uc__link{

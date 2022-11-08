@@ -13,3 +13,23 @@
         flex-basis: $width;
     }
 }
+@mixin media-laptop  {
+    @media (max-width: $content-width ) {
+        @content;
+    }
+}
+@mixin media-tablet  {
+    @media (max-width: $tablet-width ) {
+        @content;
+    }
+}
+@mixin media-mobail  {
+    @media (max-width: $mobail-big-width ) {
+        @content;
+    }
+}
+@mixin media-mobailsmoll {
+    @media (max-width: $mobail-smoll-width ) {
+        @content;
+    }
+}

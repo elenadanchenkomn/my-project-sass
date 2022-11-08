@@ -1,3 +1,4 @@
+$image-gap: 32px;
 .about-us{
     padding: 30px 0 100px 0;
 }
@@ -6,20 +7,35 @@
 }
 .employe{
     display: flex;
-    padding: 35px;
+    padding: 25px;
+    position: relative;
 }
 .about-us__descriotin{
     margin: 0 0 45px;
 }
-.employe__photo{
-   
+.employe__title{
+ @include font(1.4rem, 2.6rem, $weight:normal);
+ margin: 0;
+}
+.employe-conteiner{
+    padding-right: $image-gap;
 }
 .employe__contact{
-
+    @include font(1.4rem, 2.6rem, $weight:normal);
+    color: $color-link;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
+.employe__photo{
+   border-radius: 50%;
+   position: absolute;
+   top: -20px;
+   right: -32px;
+   margin: 0;
+}
+
 .employe__name{
     margin: 0px;
-}
-.employe__title{
- @include font ($size:1.4rem, $height:2.6rem, $weight: 400);
 }
