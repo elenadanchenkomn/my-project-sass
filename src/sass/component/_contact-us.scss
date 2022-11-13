@@ -5,6 +5,9 @@
     @include media-tablet {
         text-align: center;
     }
+    @include media-mobail{
+        padding-top: 34px;
+    }
 }
 .contact-us__conteiner{
     @include media-tablet{
