@@ -7,12 +7,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include media-tablet{
         padding-left: 24px;
     }
 }
 .header__logo__line{
-    display: flex;
+    display: none;
+    @include media-tablet{
+        display: flex;
+    }
+    
 }
 .header__buttons>.button{
     margin-left: 14px;
