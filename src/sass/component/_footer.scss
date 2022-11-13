@@ -1,12 +1,25 @@
 .footer{
     padding: 60px 0 70px;
+    @include media-mobail{
+        padding: 31px 0;
+    }
 }
 .footer-wrapper{
     display: flex;
+    @include media-tablet{
+        flex-direction: column;
+    }
 }
 .footer-navigation{
     flex-grow: 1;
     padding-left: 151px;
+    @include media-tablet{
+        padding-left: 0;
+        margin-top: 34px;
+    }
+    @include media-mobail {
+        flex-direction: column;
+    }
 }
 .footer-navigation__links{
   @extend %font-add;

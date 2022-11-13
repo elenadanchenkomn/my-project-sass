@@ -2,6 +2,19 @@
     background-color: $color-background;
     margin: 0;
     padding: 62px 0 82px 0;
+    @include media-tablet {
+        text-align: center;
+    }
+}
+.contact-us__conteiner{
+    @include media-tablet{
+        flex-direction: column;
+    }
+}
+.contact-us__content{
+  @include media-tablet{
+    max-width: 100%;
+  }
 }
 .contact-us__form{
    input, textarea{
@@ -45,4 +58,12 @@ margin-bottom: 19px;
     color: $color-text;
     text-decoration-line: none;
 
+}
+.contact-us__mobail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    >:first-child{
+        margin-bottom: 16px;
+    }
 }

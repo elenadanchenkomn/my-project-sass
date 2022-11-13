@@ -15,12 +15,22 @@ html {
   }
   h2{
     @include font(3.4rem, 4.6rem );
+    @include media-mobail{
+      @include font(2.4rem, 3.3rem );
+    }
   }
   h3{
     @include font(2.4rem, 3.4rem );
+    @include media-mobail{
+      @include font(2.1rem, 3.1rem );
+    }
+
   }
   h4{
     @include font(2.2rem, 3rem );
+    @include media-tablet {
+      @include font(2.0rem, 3.0rem );
+    }
   }
   h5{
     @include font(1.6rem, 2.6rem );

@@ -9,6 +9,29 @@ $image-gap: 32px;
     display: flex;
     padding: 25px;
     position: relative;
+    @include media-tablet {
+        overflow: hidden;
+    }
+}
+.contact-us__slider{
+    display: none;
+    >*{
+        margin-right: 5.5px;
+    }
+    
+    @include media-tablet{
+        display: flex;
+        justify-content: center;
+    }
+}
+.slider-circle{
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    content: "";
+    margin-top: $image-gap;
+   
 }
 .about-us__descriotin{
     margin: 0 0 45px;
@@ -16,9 +39,16 @@ $image-gap: 32px;
 .employe__title{
  @include font(1.4rem, 2.6rem, $weight:normal);
  margin: 0;
+ @include media-tablet{
+    text-align: center;
+ }
 }
 .employe-conteiner{
     padding-right: $image-gap;
+    @include media-tablet{
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
 }
 .employe__contact{
     @include font(1.4rem, 2.6rem, $weight:normal);
@@ -26,6 +56,11 @@ $image-gap: 32px;
     text-decoration: none;
     &:hover{
         text-decoration: underline;
+    }
+}
+.blok-shadowed{
+    @include media-tablet{
+        width: 345px;
     }
 }
 .employe__photo{

@@ -6,6 +6,27 @@
     background-repeat: no-repeat;
     
 }
+.tool__container{
+    @include media-tablet{
+        flex-wrap: wrap;
+        >.tool{
+            flex-basis: 43%;
+        }
+    }
+    @include media-mobail{
+        >.tool{
+            flex-basis: 100%;
+            margin-bottom: 47px;
+        }
+        
+    }
+  
+}
+.tool{
+    @include media-tablet{
+        text-align: center;
+    }
+}
 .tools-title{
     max-width: 462px;
     margin: auto;
@@ -21,4 +42,7 @@
 .tools__button{
     margin-top: 60px;
     text-align: center;
+    @include media-mobail{
+        margin-top: 0;
+    }
 }

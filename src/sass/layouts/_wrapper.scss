@@ -4,4 +4,7 @@
     @include media-laptop {
         padding: 0 46px;
     }
+    @include media-mobail{
+        padding: 0 21px;
+    }
 }
