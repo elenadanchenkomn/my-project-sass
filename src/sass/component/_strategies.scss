@@ -14,6 +14,9 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    &_hidden{
+        display: none;
+    }
     @include media-tablet {
         overflow: hidden;
     }

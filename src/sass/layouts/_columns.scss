@@ -3,6 +3,11 @@
 }
 .loyout-3-column {
     @include columns ($width:28%);
+    &:after{
+      content: '';
+      width: 30%;
+      display: block;
+    }
 }
 .loyout-2-column {
     @include columns ($width:45%);
