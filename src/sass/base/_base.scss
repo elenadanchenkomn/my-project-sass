@@ -42,3 +42,14 @@ html {
   li{
     list-style-type: none;
   }
+  a{
+    text-decoration: none;
+    color: $color-heading;
+    &:hover{
+      color: $color-primary;
+    }
+    &:active{
+      color: $color-primary;
+    }
+    }
+  

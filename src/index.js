@@ -1,5 +1,6 @@
-import { Article } from "./js/Article"
-import { Modal } from "./js/Modal"
+import { Article } from "./js/Article";
+import { ArticleModal } from "./js/ArticleModal";
+import { Modal } from "./js/Modal";
 //object for strategy
 const data = [
     {
@@ -69,6 +70,9 @@ window.onload = function() {
     addTagsClickHandler();
     //modal class
     addToolsClickHandler();
+    //burger menu
+    showBurgermenu();
+    closeBurgerMenu();
 
 }
 const  addTagsClickHandler = () => {
@@ -120,6 +124,7 @@ const renderArticalsToDom = () => {
         stratagiesWrapper.append(article.generateArticle())
         }
     )
+    addStrategyClickHandler();
 }
 const getSrategiesWrapper = () => {
     const strategiesConteiner = document.querySelector('.strategies-wrapper');
@@ -146,4 +151,42 @@ const generateToolsModal = () => {
 const renderModalWindow = (content) => {
  let modal = new Modal('tools-modal');
  modal.buildModal(content);
+}
+const addStrategyClickHandler = () => {
+    document.querySelector('.strategies-wrapper').addEventListener('click', (e)=>{
+        if (e.target.closest('.stretegy')){
+            let clickedStrategyId = e.target.closest('.stretegy').getAttribute('data-id');
+            let clickedStrategyDate = getClickedDate(clickedStrategyId);
+            renderArticalModalWindow(clickedStrategyDate);
+        }
+    })
+}
+const getClickedDate = (id) => {
+    return data.find(article => article.id == id);
+} 
+const renderArticalModalWindow = (article) => {
+    let modal = new ArticleModal('article-modal', article);
+    modal.renderModal();
+}
+//burger menu
+const showBurgermenu = function () {
+    document.querySelector('.humburger').addEventListener('click',()=>{
+        addShowBurger();
+    } )
+}
+const addShowBurger = () => {
+    document.querySelector('.burger__menu').classList.add('show_window');
+}
+
+const closeBurgerMenu = () => {
+    document.querySelector('.burger__menu').addEventListener('click', (e) => {
+       if(e.target.closest('.burger__navigetion' || '.burger-logo')){
+        return
+       }else {
+        removeBurgerMenu()
+       }
+    })
+}
+const removeBurgerMenu = () => {
+    document.querySelector('.burger__menu').classList.remove('show_window');
 }

@@ -52,3 +52,33 @@
     text-align: left;
     flex-grow: 1;
 }
+.strategy__img{
+    @include media-tablet{
+        position: absolute;
+        top: 0;
+    }
+}
+
+.article-modal__content{
+    .stretegy__img{
+        width: 100%;
+        @include media-tablet{
+            position: static;
+        }
+    }
+   
+    .strategies__date{
+        @include font( 1.3rem ,  normal);
+        margin: 0 20px 5px;
+    }
+    .strategies__name{
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    .stratedies__content{
+        margin: 0 0 12px;
+    }
+    .strategies__tags{
+        margin-left: 20px;
+    }
+}
